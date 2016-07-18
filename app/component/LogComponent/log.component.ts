@@ -4,11 +4,13 @@ import {DispoOffre} from "../../shared/model/dispoOffre";
 import {Vendeur} from "../../shared/model/vendeur";
 import { Offre } from "../../shared/model/offre";
 import {ListDispComponent} from "../ListDispComponent/listDisp.component";
+import {MaterializeDirective} from "angular2-materialize/dist/index";
+import {FORM_DIRECTIVES} from "@angular/common";
 @Component({
     selector : 'log',
     templateUrl: 'app/component/LogComponent/log.component.html',
     styleUrls: ['app/component/LogComponent/log.component.css'],
-    directives:[ListDispComponent],
+    directives:[ListDispComponent,MaterializeDirective],
     providers:[ListOffersService]
 
 })
@@ -25,7 +27,8 @@ export class LogComponent implements OnInit{
     Offres : Offre[];
 
     @Input()
-    idOffre:number;
+    idOffre:number = 1;
+    idVendeur:number;
 
     ngOnInit() {
         this.ListVendeur();
@@ -41,7 +44,7 @@ export class LogComponent implements OnInit{
             error => console.log("not done"),
             ()=> console.log("done")
         )
-        console.log(this.DispoOffres[1].nom);
+
         return this.DispoOffres;
     }
 
@@ -63,5 +66,9 @@ export class LogComponent implements OnInit{
             error => console.log("not done"),
             () => console.log("done")
         )
+    }
+
+    test(){
+        console.log("TESTOK");
     }
 }

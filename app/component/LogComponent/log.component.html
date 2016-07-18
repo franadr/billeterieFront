@@ -1,28 +1,42 @@
+
 <div class="row">
-    <table class="table-bordered">
+    {{test()}}
+<table>
     <thead>
         <tr>
-                <th>Nom activité</th>
-
+            <th >Numero activité</th>
             <th *ngFor="let list of Vendeurs">
                 {{list.nom}} {{list.prenom}}
             </th>
-
         </tr>
     </thead>
-        <tbody>
-        <tr *ngFor="let list of Offres">
-            <td> {{list.titre}}</td>
+    <tbody>
+    <tr>
+
+        <td class="col s3">
+        <select  [(ngModel)]="idOffre"  materialize="material_select" (ngModelChange)="ListDispo(idOffre)">
+            <option    *ngFor="let list of Offres" >{{list.idOffre}}
+            </option>
+        </select>
+        </td>
+
+        <td  *ngFor="let list2 of DispoOffres">
+        {{list2.quantite}}
+        </td>
+
+    </tr>
+
+    </tbody>
 
 
-            <td *ngFor="let list2 of DispoOffres">
+</table>
 
-            </td>
-        </tr>
-        </tbody>
-    </table>
-
-
-
+    <ul *ngFor="let list of Offres">
+        {{list.idOffre}} : {{list.titre}}
+    </ul>
 
 </div>
+
+
+
+
