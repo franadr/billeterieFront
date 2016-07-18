@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+<div class="row">
+
+
+    <div class="col s4 ">
+        <h3 >Liste des offres disponible</h3>
+        <button class="waves-effect waves-light btn-large" (click)="ListOffers()"><i class="material-icons left">loop</i>Rafraichir les offres</button>
+    </div>
+    <collapsible class ="col s8" >
+    <ul class="collapsible popout hoverable   " data-collapsible="accordion" materialize="collapsible"  *ngFor="let list of ListOffres; let i = index ">
+
+        <li>
+        <div class="collapsible-header "><img class="vignette" src="{{list.imgUrl}}"><h5>{{list.titre}}</h5>
+
+
+
+        </div>
+        <div class="collapsible-body body-text row ">
+
+            <!-- Left side from collapsible body -->
+            <div class="col s6 ">
+                <div class="container">
+                <div class="DispoTitle">Info : </div>
+                <a href="{{list.link}}" >{{list.titre}}</a>
+                    <br /><b class="prix-cfl">Prix CFL : {{list.prixCfl}}€</b>
+                    <br />Prix Public : {{list.prixPublic}}€
+                    <br />En commande : {{list.commande}}
+
+                </div>
+            </div>
+
+            <!-- Right side of collapsible body-->
+            <div class="col s6 ">
+            <list-dispo  idOffre={{list.idOffre}} ></list-dispo>
+            </div>
+
+
+
+
+
+
+        </div>
+        </li>
+
+    </ul>
+    </collapsible>
+
+
+</div>
+
+</body>
+</html>
+
+
+
+<!--<table>
+                 <tr>
+
+                     <th></th>
+                     <th>Description</th>
+                     <th>Prix public</th>
+                     <th>Prix CFL</th>
+                     <th>commande</th>
+                 </tr>
+                 <tr>
+
+                    <td><a href="{{list.link}}"> {{list.titre}}</a></td>
+                     <td>{{list.description}}</td>
+                    <td>{{list.prixCfl}} €</td>
+                    <td>{{list.prixPublic}} €</td>
+                    <td>{{list.commande}}</td>
+                 </tr>
+            </table>-->

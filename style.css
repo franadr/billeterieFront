@@ -1,0 +1,231 @@
+/* Master Styles */
+h1 {
+  color: #369; 
+  font-family: Arial, Helvetica, sans-serif;   
+  font-size: 250%;
+}
+h2, h3 { 
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;   
+  font-weight: lighter;
+}
+body { 
+  margin: 2em;
+
+}
+body, input[text], button { 
+  color: #888; 
+  font-family: Cambria, Georgia; 
+}
+a {
+  cursor: pointer;
+  cursor: hand;
+}
+button {
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #aaa; 
+  cursor: auto;
+}
+
+/* Navigation link styles */
+nav a {
+
+  font: normal 76px/1 "Aclonica", Helvetica, sans-serif;
+}
+
+nav a:hover {
+
+}
+nav a.router-link-active {
+  color: #039be5;
+}
+
+/* items class */
+.items {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 24em;
+}
+.items li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+}
+.items li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+.items li.selected:hover {
+  background-color: #BBD8DC;
+  color: blue;
+}
+.items .text {
+  position: relative;
+  top: -3px;
+}
+.items {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 24em;
+}
+.items li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+}
+.items li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+.items li.selected {
+  background-color: #CFD8DC;
+  color: white;
+}
+
+.items li.selected:hover {
+  background-color: #BBD8DC;
+}
+.items .text {
+  position: relative;
+  top: -3px;
+}
+.items .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #607D8B;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+
+.main{
+
+alignment: center;
+
+}
+/* everywhere else */
+* { 
+  font-family: Roboto;
+}
+
+
+nav ul a{
+
+  font-size: 2rem;
+}
+
+/* Custom added*/
+.vignette {
+    width: 90px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+  font-family: Roboto;
+  font-weight: 200;
+
+}
+
+h1{
+  font-size:4.5rem;
+
+}
+
+.body-text{
+  font-weight:lighter;
+
+}
+
+.btn, .btn-large{
+
+  background-color: #F18D01;
+}
+
+.btn:hover, .btn-large:hover {
+
+  background-color: orangered;
+}
+
+.body-text{
+    font-family: Roboto;
+    font-weight: lighter;
+    font-size: 1rem;
+
+}
+.DispoTitle{
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 1.5rem;
+
+}
+
+.prix-cfl{
+    font-weight: 300;
+
+}
+
+h5{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding-left: 20px;
+
+
+}
+
+.container .row{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.navbar-button:hover{
+    background-color: orange;
+
+}
+.navbar{
+    background-color: #F18D01;
+}
+.navbar-link{
+    font-weight: 100;
+    font-family:Roboto;
+    text-align: center;
+}
+.navbar-link:hover{
+
+    background-color:rgba(0,0,0,0) ;
+}
+
+.side-nav.fixed{
+    position: relative;
+}

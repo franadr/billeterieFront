@@ -1,0 +1,65 @@
+.waves-effect{
+
+
+}
+
+button{
+    background-color: #f18d01;
+    font-family: Roboto;
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: white;
+
+}
+
+button:hover{
+    background-color: red;
+
+}
+
+h4{
+    font-size: 2.7rem;
+    font-weight: 100;
+    color: red;
+
+}
+
+/* label color */
+.input-field label {
+    color: #4b585d;
+    font-family: Roboto;
+    font-weight: 200;
+    font-size: 1.15rem;
+}
+                        /* Form component CSS */
+
+/* label focus color */
+.input-field input[type=text]:focus + label {
+    color: gray;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid gray;
+    box-shadow: 0 1px 0 0 gray;
+}
+/* valid color */
+.input-field input[type=text].valid {
+    border-bottom: 1px solid Green;
+    box-shadow: 0 1px 0 0 Green;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+    border-bottom: 1px solid darkred;
+    box-shadow: 0 1px 0 0 darkred;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+    color: #000;
+}
+
+
+                        /* Range selector CSS*/
+
+
+
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<nav class = "row navbar">
+    <div class="nav-wrapper col s12">
+
+        <img src="http://www.intech.lu/sites/default/files/intech_post_logo.png" class="brand-logo right">
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li class="navbar-button">
+                <a class="navbar-link" [routerLink]="['/offres']">Liste des offres</a>
+
+
+            </li>
+            <li class="navbar-button">
+                <!--<a class="navbar-link" [routerLink]="['/edit']">Editer les offres</a></li>-->
+                <dropdown>
+                <a class="dropdown-button active navbar-link " data-hover="false" data-beloworigin="true" data-constrainwidth="false"  data-activates="editmenu" materialize="dropdown">Edit</a>
+                    <ul id="editmenu" class = "dropdown-content active dropdownMenu navbar-link"  >
+
+                        <p><a class="dropdownMenu" [routerLink]="['/edit/add']">Ajouter une offre </a></p>
+
+
+                        <p><a class="dropdownMenu">Modifier une offre </a></p>
+
+
+                        <p><a class="dropdownMenu" >Editer Vendeurs </a></p>
+
+                    </ul>
+                </dropdown>
+
+        </ul>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>
+</body>
+</html>
