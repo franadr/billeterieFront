@@ -4,6 +4,8 @@ export class DispoOffre{
     location : string;
     nom : string;
     prenom: string;
+    idVendeur: number;
+    idOffre: number;
 
 
 }

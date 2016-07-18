@@ -23,6 +23,10 @@ var ListOffersService = (function () {
         this.RestUrl = "http://localhost:8080/offres/" + idOffre;
         return this._http.get(this.RestUrl).map(function (res) { return res.json(); });
     };
+    ListOffersService.prototype.getAllDispo = function () {
+        this.RestUrl = "http://localhost:8080/offres/allDisp";
+        return this._http.get(this.RestUrl).map(function (res) { return res.json(); });
+    };
     ListOffersService.prototype.getVendeurs = function () {
         this.RestUrl = "http://localhost:8080/offres/vendeurs";
         return this._http.get(this.RestUrl).map(function (res) { return res.json(); });

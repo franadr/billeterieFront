@@ -1,0 +1,22 @@
+
+<div class="row">
+
+
+<table *ngFor="let list2 of Offres">
+    {{ListDispo(list2.idOffre)}}
+    <tr *ngFor="let list of DispoOffres">
+        {{list.quantite}}
+    </tr>
+
+
+</table>
+
+   <!-- <ul *ngFor="let list of Offres">
+        {{list.idOffre}} : {{list.titre}}
+    </ul>-->
+
+</div>
+
+
+
+

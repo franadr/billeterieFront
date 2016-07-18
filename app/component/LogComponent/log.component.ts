@@ -27,25 +27,27 @@ export class LogComponent implements OnInit{
     Offres : Offre[];
 
     @Input()
-    idOffre:number = 1;
+
     idVendeur:number;
 
     ngOnInit() {
         this.ListVendeur();
         this.ListOffre();
+        this.ListDispo();
+
     }
 
 
-    ListDispo(idOffre:number):DispoOffre[] {
+    ListDispo(){
 
 
-        this._listoffers.getDispo(idOffre).subscribe(
+        this._listoffers.getAllDispo().subscribe(
             data => this.DispoOffres = data,
             error => console.log("not done"),
-            ()=> console.log("done")
+            ()=> console.log("GetAllDispoDone")
         )
 
-        return this.DispoOffres;
+
     }
 
 

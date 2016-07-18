@@ -30,6 +30,12 @@ export class ListOffersService {
             return this._http.get(this.RestUrl).map(res => res.json());
     }
 
+    getAllDispo(): Observable <DispoOffre[]>{
+
+        this.RestUrl="http://localhost:8080/offres/allDisp";
+        return this._http.get(this.RestUrl).map(res => res.json());
+    }
+
     getVendeurs():Observable <Vendeur[]>{
 
         this.RestUrl="http://localhost:8080/offres/vendeurs";
