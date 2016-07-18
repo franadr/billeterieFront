@@ -1,0 +1,28 @@
+<div class="row">
+    <table class="table-bordered">
+    <thead>
+        <tr>
+                <th>Nom activité</th>
+
+            <th *ngFor="let list of Vendeurs">
+                {{list.nom}} {{list.prenom}}
+            </th>
+
+        </tr>
+    </thead>
+        <tbody>
+        <tr *ngFor="let list of Offres">
+            <td> {{list.titre}}</td>
+
+
+            <td *ngFor="let list2 of DispoOffres">
+
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+
+
+</div>
