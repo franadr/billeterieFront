@@ -20,11 +20,11 @@ var LogComponent = (function () {
     LogComponent.prototype.ngOnInit = function () {
         this.ListVendeur();
         this.ListOffre();
-        this.ListDispo();
+        this.ListDispo(this.idOffre);
     };
-    LogComponent.prototype.ListDispo = function () {
+    LogComponent.prototype.ListDispo = function (idOffre) {
         var _this = this;
-        this._listoffers.getAllDispo().subscribe(function (data) { return _this.DispoOffres = data; }, function (error) { return console.log("not done"); }, function () { return console.log("GetAllDispoDone"); });
+        this._listoffers.getDispo(this.idOffre).subscribe(function (data) { return _this.DispoOffres = data; }, function (error) { return console.log("not done"); }, function () { return console.log("GetAllDispoDone"); });
     };
     LogComponent.prototype.ListVendeur = function () {
         var _this = this;
@@ -41,7 +41,7 @@ var LogComponent = (function () {
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Number)
-    ], LogComponent.prototype, "idVendeur", void 0);
+    ], LogComponent.prototype, "idOffre", void 0);
     LogComponent = __decorate([
         core_1.Component({
             selector: 'log',

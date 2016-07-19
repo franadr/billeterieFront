@@ -11,15 +11,17 @@
         </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let list of Offres;let i=index" >
+    <tr>
 
-        <td class="col s4" >
-            {{list.titre}}
-
+        <td class="col s3">
+        <select  [(ngModel)]="idOffre"  materialize="material_select" (ngModelChange)="ListDispo(idOffre)">
+            <option    *ngFor="let list of Offres" >{{list.idOffre}}
+            </option>
+        </select>
         </td>
 
-        <td *ngFor="let list2 of DispoOffres" >
-             {{list2.quantite}}
+        <td  *ngFor="let list2 of DispoOffres">
+        {{list2.quantite}}
         </td>
 
     </tr>
@@ -29,9 +31,9 @@
 
 </table>
 
-   <!-- <ul *ngFor="let list of Offres">
+    <ul *ngFor="let list of Offres">
         {{list.idOffre}} : {{list.titre}}
-    </ul>-->
+    </ul>
 
 </div>
 
