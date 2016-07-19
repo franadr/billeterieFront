@@ -57,5 +57,26 @@ export class ListOffersService {
         return this._http.post(this.RESTurl,jsonObj,headers).map(res => res.json());
     }
 
+    modifDisp(idOffre,idVendeur,quantite){
+        let headers = new Headers({
+            'Content-Type':'application/json',
+            'Accept':'application/json'
+        });
+        this.RESTurl = "http://localhost:8080/offres/modifDisp";
+        var res : DispoOffre = new DispoOffre;
+        var qConverted : number = parseInt(quantite);
+        res.idOffre=idOffre;
+        res.idVendeur=idVendeur;
+        res.quantite=qConverted;
+
+        var disp= JSON.stringify(res);
+
+        var jsonobj = JSON.parse(disp);
+
+        return this._http.post(this.RESTurl,jsonobj,headers).map(res => res.json());
+
+
+    }
+
 
 }

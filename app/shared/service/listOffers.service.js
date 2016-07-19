@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 require('rxjs/add/operator/map');
+var dispoOffre_1 = require("../model/dispoOffre");
 var ListOffersService = (function () {
     function ListOffersService(_http) {
         this._http = _http;
@@ -42,6 +43,21 @@ var ListOffersService = (function () {
         var jsonObj = JSON.parse(offres);
         console.log(jsonObj);
         return this._http.post(this.RESTurl, jsonObj, headers).map(function (res) { return res.json(); });
+    };
+    ListOffersService.prototype.modifDisp = function (idOffre, idVendeur, quantite) {
+        var headers = new http_1.Headers({
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        });
+        this.RESTurl = "http://localhost:8080/offres/modifDisp";
+        var res = new dispoOffre_1.DispoOffre;
+        var qConverted = parseInt(quantite);
+        res.idOffre = idOffre;
+        res.idVendeur = idVendeur;
+        res.quantite = qConverted;
+        var disp = JSON.stringify(res);
+        var jsonobj = JSON.parse(disp);
+        return this._http.post(this.RESTurl, jsonobj, headers).map(function (res) { return res.json(); });
     };
     ListOffersService = __decorate([
         core_1.Injectable(), 

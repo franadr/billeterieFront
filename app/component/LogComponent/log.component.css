@@ -1,0 +1,13 @@
+button{
+    background-color: #f18d01;
+    font-family: Roboto;
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: white;
+
+}
+
+button:hover{
+    background-color: red;
+
+}

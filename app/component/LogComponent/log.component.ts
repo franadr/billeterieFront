@@ -33,15 +33,15 @@ export class LogComponent implements OnInit{
     ngOnInit() {
         this.ListVendeur();
         this.ListOffre();
-        this.ListDispo(this.idOffre);
+       // this.ListDispo(this.idOffre);
 
     }
 
 
-    ListDispo(idOffre){
+    ListDispo(idOffre:number){
 
 
-        this._listoffers.getDispo(this.idOffre).subscribe(
+        this._listoffers.getDispo(idOffre).subscribe(
             data => this.DispoOffres = data,
             error => console.log("not done"),
             ()=> console.log("GetAllDispoDone")
@@ -70,7 +70,11 @@ export class LogComponent implements OnInit{
         )
     }
 
-    test(){
-        console.log("TESTOK");
+    DispoModif(idOffre,idVendeur,quantite){
+        this._listoffers.modifDisp(idOffre,idVendeur,quantite).subscribe(
+            data => console.log("ModifDone"),
+            error => " "
+        )
+
     }
 }

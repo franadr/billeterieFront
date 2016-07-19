@@ -20,11 +20,11 @@ var LogComponent = (function () {
     LogComponent.prototype.ngOnInit = function () {
         this.ListVendeur();
         this.ListOffre();
-        this.ListDispo(this.idOffre);
+        // this.ListDispo(this.idOffre);
     };
     LogComponent.prototype.ListDispo = function (idOffre) {
         var _this = this;
-        this._listoffers.getDispo(this.idOffre).subscribe(function (data) { return _this.DispoOffres = data; }, function (error) { return console.log("not done"); }, function () { return console.log("GetAllDispoDone"); });
+        this._listoffers.getDispo(idOffre).subscribe(function (data) { return _this.DispoOffres = data; }, function (error) { return console.log("not done"); }, function () { return console.log("GetAllDispoDone"); });
     };
     LogComponent.prototype.ListVendeur = function () {
         var _this = this;
@@ -35,8 +35,8 @@ var LogComponent = (function () {
         var _this = this;
         this._listoffers.getOffers().subscribe(function (data) { return _this.Offres = data; }, function (error) { return console.log("not done"); }, function () { return console.log("done"); });
     };
-    LogComponent.prototype.test = function () {
-        console.log("TESTOK");
+    LogComponent.prototype.DispoModif = function (idOffre, idVendeur, quantite) {
+        this._listoffers.modifDisp(idOffre, idVendeur, quantite).subscribe(function (data) { return console.log("ModifDone"); }, function (error) { return " "; });
     };
     __decorate([
         core_1.Input(), 

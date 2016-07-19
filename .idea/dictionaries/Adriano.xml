@@ -2,8 +2,10 @@
   <dictionary name="Adriano">
     <words>
       <w>ajouter</w>
+      <w>ajuster</w>
       <w>billeterie</w>
       <w>billetterie</w>
+      <w>confirmer</w>
       <w>dispomponent</w>
       <w>disponible</w>
       <w>essaie</w>
@@ -13,6 +15,7 @@
       <w>listoffers</w>
       <w>offres</w>
       <w>opérations</w>
+      <w>quantités</w>
       <w>turl</w>
     </words>
   </dictionary>

@@ -1,6 +1,6 @@
-
+<!-- Version 1 of log.html with dropdown list  -->
 <div class="row">
-
+    <h4>Quantités à ajuster </h4>
 <table>
     <thead>
         <tr>
@@ -13,28 +13,40 @@
     <tbody>
     <tr>
 
-        <td class="col s3">
+        <td class="col s5">
         <select  [(ngModel)]="idOffre"  materialize="material_select" (ngModelChange)="ListDispo(idOffre)">
             <option    *ngFor="let list of Offres" >{{list.idOffre}}
             </option>
         </select>
+
         </td>
 
         <td  *ngFor="let list2 of DispoOffres">
         {{list2.quantite}}
+
+            <input style="color: green" type="number" #quantite  value="{{list2.quantite}}" (change)="DispoModif(list2.idOffre,list2.idVendeur,quantite.value)">
+
         </td>
 
     </tr>
+
 
     </tbody>
 
 
 </table>
-
-    <ul *ngFor="let list of Offres">
+<div class="row">
+    <ul class="col s10" *ngFor="let list of Offres">
         {{list.idOffre}} : {{list.titre}}
     </ul>
 
+    <!-- Need to attach refresh function -->
+    <button  class="waves-effect waves-light " >Confirmer
+        <i class="material-icons right">send</i>
+    </button>
+
+
+</div>
 </div>
 
 
