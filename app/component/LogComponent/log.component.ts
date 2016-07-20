@@ -1,14 +1,14 @@
-import {Component, Input,OnInit} from '@angular/core';
+import {Component,OnInit} from '@angular/core';
 import {ListOffersService} from '../../shared/service/listOffers.service';
 import {DispoOffre} from "../../shared/model/dispoOffre";
 import {Vendeur} from "../../shared/model/vendeur";
 import { Offre } from "../../shared/model/offre";
 import {ListDispComponent} from "../ListDispComponent/listDisp.component";
 import {MaterializeDirective} from "angular2-materialize/dist/index";
-import {FORM_DIRECTIVES} from "@angular/common";
+
 @Component({
     selector : 'log',
-    templateUrl: 'app/component/LogComponent/log.component.html',
+    templateUrl: 'app/component/LogComponent/log.component2.html',
     styleUrls: ['app/component/LogComponent/log.component.css'],
     directives:[ListDispComponent,MaterializeDirective],
     providers:[ListOffersService]
@@ -22,24 +22,18 @@ export class LogComponent implements OnInit{
 
     }
 
+    ngOnInit() {
+        this.ListOffre();
+        this.ListVendeur();
+
+
+    }
     DispoOffres:DispoOffre[];
     Vendeurs : Vendeur[];
     Offres : Offre[];
-
-    @Input()
     idOffre:number;
-    idVendeur:number;
-
-    ngOnInit() {
-        this.ListVendeur();
-        this.ListOffre();
-       // this.ListDispo(this.idOffre);
-
-    }
-
 
     ListDispo(idOffre:number){
-
 
         this._listoffers.getDispo(idOffre).subscribe(
             data => this.DispoOffres = data,

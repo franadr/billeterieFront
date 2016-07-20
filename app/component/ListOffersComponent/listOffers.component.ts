@@ -41,9 +41,31 @@ export class ListOffersComponent implements OnInit{
 
         this._listoffers.getOffers().subscribe(
             data => this.ListOffres = data,
-            error => this.status = "Somethings append",
+            error => this.status =  this.CatchErrorCode(error),
             ( )=> console.log("Done")
         )
+    }
+
+    CatchErrorCode(code : number) : string{
+        var res : string;
+
+        switch(code){
+            case 500:
+                res = 'Internal server error code';
+                break;
+            case 404:
+                res = 'Ressource not found code ';
+                break;
+            case 405:
+                res = 'Method not allowed code';
+                break;
+            default :
+                res = 'Unknown error';
+                break;
+        }
+
+
+        return res;
     }
 
     

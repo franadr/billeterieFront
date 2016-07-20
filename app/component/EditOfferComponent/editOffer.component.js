@@ -13,27 +13,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var common_1 = require('@angular/common');
+var core_1 = require("@angular/core");
 var listOffers_service_1 = require("../../shared/service/listOffers.service");
-var AddOfferComponent = (function (_super) {
-    __extends(AddOfferComponent, _super);
-    function AddOfferComponent(_listVen) {
+var index_1 = require("angular2-materialize/dist/index");
+var EditOfferComponent = (function (_super) {
+    __extends(EditOfferComponent, _super);
+    function EditOfferComponent(_listoffers) {
         _super.call(this);
-        this._listVen = _listVen;
+        this._listoffers = _listoffers;
     }
-    AddOfferComponent.prototype.addOffre = function (offre) {
+    EditOfferComponent.prototype.ngOnInit = function () {
+        this.ListOffre();
+    };
+    EditOfferComponent.prototype.ListOffre = function () {
         var _this = this;
-        this._listVen.postOffer(offre).subscribe(function (data) { return _this.status = 'Offre ajouté'; }, function (err) { return _this.status = _this.CatchErrorCode(err); }, function () { return console.log("Done"); });
+        this._listoffers.getOffers().subscribe(function (data) { return _this.Offres = data; }, function (error) { return console.log("not done"); }, function () { return console.log("done"); });
     };
-    AddOfferComponent.prototype.ngOnInit = function () {
-        this.ListVendeurs();
+    EditOfferComponent.prototype.onselect = function (Offre) {
+        this.SelectedOffer = Offre;
     };
-    AddOfferComponent.prototype.ListVendeurs = function () {
+    EditOfferComponent.prototype.editOffre = function (offre) {
         var _this = this;
-        this._listVen.getVendeurs().subscribe(function (data) { return _this.Vendeurs = data; }, function (err) { return _this.status = _this.CatchErrorCode(err); }, function () { return console.log("done"); });
+        this._listoffers.modifOffre(offre).subscribe(function (data) { return _this.status = 'Offre ajouté'; }, function (err) { return _this.status = err; }, function () { return console.log("Done"); });
     };
-    AddOfferComponent.prototype.CatchErrorCode = function (code) {
+    EditOfferComponent.prototype.CatchErrorCode = function (code) {
         var res;
         switch (code) {
             case 500:
@@ -45,23 +48,26 @@ var AddOfferComponent = (function (_super) {
             case 405:
                 res = 'Method not allowed code';
                 break;
+            case 200:
+                res = 'Done !';
+                break;
             default:
                 res = 'Unknown error';
                 break;
         }
         return res;
     };
-    AddOfferComponent = __decorate([
+    EditOfferComponent = __decorate([
         core_1.Component({
-            selector: 'add-offer',
-            templateUrl: 'app/component/AddOfferComponent/addOffer.component.html',
-            styleUrls: ['app/component/AddOfferComponent/addOffer.component.css'],
-            directives: [common_1.FORM_DIRECTIVES],
+            selector: 'edit-offer',
+            templateUrl: 'app/component/EditOfferComponent/editOffer.component.html',
+            styleUrls: ['app/component/EditOfferComponent/editOffer.component.css'],
+            directives: [index_1.MaterializeDirective],
             providers: [listOffers_service_1.ListOffersService]
         }), 
         __metadata('design:paramtypes', [listOffers_service_1.ListOffersService])
-    ], AddOfferComponent);
-    return AddOfferComponent;
+    ], EditOfferComponent);
+    return EditOfferComponent;
 }(core_1.OnInit));
-exports.AddOfferComponent = AddOfferComponent;
-//# sourceMappingURL=addOffer.component.js.map
+exports.EditOfferComponent = EditOfferComponent;
+//# sourceMappingURL=editOffer.component.js.map

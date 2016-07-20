@@ -1,38 +1,42 @@
-<!-- version 2 of log.html with button NOT WORKING -->
+<!-- Version 1 of log.html with dropdown list  -->
 
-<div class="row">
-
-
-
-    <table class="col s4">
+    <h4>Quantités à ajuster </h4>
+    <table>
+        <thead>
         <tr>
-            <th >Numero activité</th>
+
+            <th *ngFor="let list of Vendeurs">
+                {{list.nom}} {{list.prenom}}
+            </th>
         </tr>
-        <tr *ngFor="let list of Offres;let i=index">
-            <button (click)="ListDispo(list.idOffre)"> {{list.titre}} </button>
-        </tr>
-    </table>
-    <table class="col s8">
+        </thead>
+        <tbody>
         <tr>
-            <th *ngFor="let vendeur of Vendeurs">{{vendeur.nom}} {{vendeur.prenom}}</th>
-        </tr>
-        <tr >
-            <td *ngFor="let dispo of DispoOffres">{{dispo.quantite}}</td>
+
+
+
+            <td  *ngFor="let list2 of DispoOffres">
+                {{list2.quantite}}
+                <p class="range-field">
+                    <input style="color: green" type="range" min="0" max="20" #quantite  value="{{list2.quantite}}" (change)="DispoModif(list2.idOffre,list2.idVendeur,quantite.value)">Ajustement :{{quantite.value}}
+                </p>
+            </td>
 
         </tr>
+
+
+        </tbody>
+
 
     </table>
 
+        <select materialize="material_select"  [(ngModel)]="idOffre" (ngModelChange)="ListDispo(idOffre)"  >
+            <option value="" disabled selected>Selectionner Activité</option>
+            <option value = "{{list.idOffre}}"   *ngFor="let list of Offres" >{{list.titre}}</option>
+        </select>
 
 
 
-
-
-   <!-- <ul *ngFor="let list of Offres">
-        {{list.idOffre}} : {{list.titre}}
-    </ul>-->
-
-</div>
 
 
 

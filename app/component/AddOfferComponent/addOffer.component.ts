@@ -26,8 +26,8 @@ export class AddOfferComponent extends OnInit {
     addOffre(offre){
 
         this._listVen.postOffer(offre).subscribe(
-            data => this.o = data,
-            error => this.status = "Somethings append",
+            data => this.status = 'Offre ajouté',
+            err => this.status = this.CatchErrorCode(err) ,
             ( )=> console.log("Done")
         );
 
@@ -41,10 +41,32 @@ export class AddOfferComponent extends OnInit {
     ListVendeurs (){
         this._listVen.getVendeurs().subscribe(
             data => this.Vendeurs = data,
-            error => console.log("not done"),
+            err => this.status = this.CatchErrorCode(err),
             ()=> console.log("done")
 
         )
+    }
+
+    CatchErrorCode(code : number) : string{
+        var res : string;
+
+        switch(code){
+            case 500:
+                res = 'Internal server error code';
+                break;
+            case 404:
+                res = 'Ressource not found code ';
+                break;
+            case 405:
+                res = 'Method not allowed code';
+                break;
+            default :
+                res = 'Unknown error';
+                break;
+        }
+
+
+        return res;
     }
 
 }

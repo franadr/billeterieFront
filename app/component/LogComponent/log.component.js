@@ -18,9 +18,8 @@ var LogComponent = (function () {
         this._listVen = _listVen;
     }
     LogComponent.prototype.ngOnInit = function () {
-        this.ListVendeur();
         this.ListOffre();
-        // this.ListDispo(this.idOffre);
+        this.ListVendeur();
     };
     LogComponent.prototype.ListDispo = function (idOffre) {
         var _this = this;
@@ -38,14 +37,10 @@ var LogComponent = (function () {
     LogComponent.prototype.DispoModif = function (idOffre, idVendeur, quantite) {
         this._listoffers.modifDisp(idOffre, idVendeur, quantite).subscribe(function (data) { return console.log("ModifDone"); }, function (error) { return " "; });
     };
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Number)
-    ], LogComponent.prototype, "idOffre", void 0);
     LogComponent = __decorate([
         core_1.Component({
             selector: 'log',
-            templateUrl: 'app/component/LogComponent/log.component.html',
+            templateUrl: 'app/component/LogComponent/log.component2.html',
             styleUrls: ['app/component/LogComponent/log.component.css'],
             directives: [listDisp_component_1.ListDispComponent, index_1.MaterializeDirective],
             providers: [listOffers_service_1.ListOffersService]

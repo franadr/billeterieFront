@@ -13,18 +13,23 @@
     <tbody>
     <tr>
 
-        <td class="col s5">
-        <select  [(ngModel)]="idOffre"  materialize="material_select" (ngModelChange)="ListDispo(idOffre)">
-            <option    *ngFor="let list of Offres" >{{list.idOffre}}
+        <td >
+
+        <select value="Selectionner Activité" [(ngModel)]="idOffre"  materialize="material_select" (ngModelChange)="ListDispo(idOffre)">
+            <option class ="browser-default" value="" disabled selected>Selectionner Activité</option>
+            <option value = "{{list.idOffre}}"   *ngFor="let list of Offres" >{{list.titre}}
             </option>
         </select>
+                <label>Selectionner activité</label>
+
 
         </td>
 
         <td  *ngFor="let list2 of DispoOffres">
         {{list2.quantite}}
+            <p class="range-field">
             <input style="color: green" type="range" min="0" max="20" #quantite  value="{{list2.quantite}}" (change)="DispoModif(list2.idOffre,list2.idVendeur,quantite.value)">Ajustement :{{quantite.value}}
-
+            </p>
         </td>
 
     </tr>
@@ -34,19 +39,7 @@
 
 
 </table>
-<div class="row">
-    <pre class="col s5" style="height: 250">
-    <ul style="margin: 2px" *ngFor="let list of Offres">
-        {{list.idOffre}} : {{list.titre}}
-    </ul>
-    </pre>
-    <!-- Need to attach refresh function -->
-    <button  class="waves-effect waves-light col push-s4 " >Confirmer
-        <i class="material-icons right">send</i>
-    </button>
 
-
-</div>
 </div>
 
 

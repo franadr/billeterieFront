@@ -21,7 +21,25 @@ var ListOffersComponent = (function () {
     };
     ListOffersComponent.prototype.ListOffers = function () {
         var _this = this;
-        this._listoffers.getOffers().subscribe(function (data) { return _this.ListOffres = data; }, function (error) { return _this.status = "Somethings append"; }, function () { return console.log("Done"); });
+        this._listoffers.getOffers().subscribe(function (data) { return _this.ListOffres = data; }, function (error) { return _this.status = _this.CatchErrorCode(error); }, function () { return console.log("Done"); });
+    };
+    ListOffersComponent.prototype.CatchErrorCode = function (code) {
+        var res;
+        switch (code) {
+            case 500:
+                res = 'Internal server error code';
+                break;
+            case 404:
+                res = 'Ressource not found code ';
+                break;
+            case 405:
+                res = 'Method not allowed code';
+                break;
+            default:
+                res = 'Unknown error';
+                break;
+        }
+        return res;
     };
     ListOffersComponent = __decorate([
         core_1.Component({

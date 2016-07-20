@@ -1,0 +1,93 @@
+
+
+
+
+
+<div class="row ">
+<div class="listoffre col s3 ">
+    <ul *ngFor="let list of Offres" >
+
+        <a class="waves-effect waves-light btn-large" (click)=onselect(list)>{{list.titre}}</a>
+
+    </ul>
+</div>
+
+
+
+
+
+<div class="col s9" *ngIf="SelectedOffer">
+    <h4>{{SelectedOffer.titre}}</h4>
+
+
+
+
+    <form #offreForm = "ngForm" (ngSubmit)="editOffre(offreForm.value)"  class="col s12 addOffer" materialize>
+
+        <div class="row">
+            <div class="input-field col s8">
+                <input class="validate " id="titre" type="text"  [(ngModel)] = "SelectedOffer.titre" value= "[(ngModel)]" ngControl="titre" >
+                <label for="titre" class="active" >*Titre de l'activité</label>
+            </div>
+
+            <div class="input-field col s2">
+                <input class="validate" id="prix_cfl" type="number" [(ngModel)] = "SelectedOffer.prixCfl" value= {{SelectedOffer.prixCfl}} ngControl="prixCfl" min="0">
+                <label for="prix_cfl" class="active">*Prix CFL</label>
+            </div>
+            <div class="input-field col s2">
+                <input class="validate" id="prix_public"  type="number" min="0" [(ngModel)] = SelectedOffer.prixPublic value= {{SelectedOffer.prixPrublic}} ngControl="prixPublic" min="0">
+                <label for="prix_public" class="">*Prix Public</label>
+            </div>
+            <div class="input-field col s12" >
+                <input id="link" type="text" ngControl="link" [(ngModel)] = "SelectedOffer.link" value= "[(ngModel)]">
+                <label for="link" class="">Liens du site web de l'activité</label>
+            </div>
+            <div class="input-field col s12" >
+                <input id="imageUrl" type="text" ngControl="imgUrl" [(ngModel)] = "SelectedOffer.imgUrl" value= "[(ngModel)]">
+                <label for="imageUrl" class="">Liens de la vignette de l'activité</label>
+            </div>
+            <div class="input-field col s1" >
+                <input id="commande" type="number" ngControl="commande" [(ngModel)] = "SelectedOffer.commande" value= {{SelectedOffer.commande}} min="0">
+                <label for="commande" class="">En commande</label>
+            </div>
+            <div class="input-field col s1" >
+                <input disabled id="idOffre" type="number" ngControl="idOffre" [(ngModel)] = "SelectedOffer.idOffre" value= {{SelectedOffer.idOffre}} >
+                <label for="idOffre" class="">id</label>
+            </div>
+        </div>
+
+        <!-- Optional as trigger function initilize Qty in mysql
+
+        <h4>Renseignements sur les disponibilités</h4>
+        <div class="row">
+
+
+
+        <ul >
+
+            <li class="input-field col s1" *ngFor="let list of Vendeurs" >
+
+                <input value="0" id="quantite" type="range" min="0" max="10">{{list.nom}}, {{list.prenom}}
+
+            </li>
+
+
+        </ul>
+
+        </div>-->
+        <button  class="waves-effect waves-light " type="submit" name="action">Sauvegarder l'offre
+            <i class="material-icons right">send</i>
+        </button>
+        {{status}}
+    </form>
+
+
+
+
+</div>
+    <div *ngIf="!SelectedOffer">
+        <h4> <----  Veuillez selectionner une offre </h4>
+
+    </div>
+
+</div>

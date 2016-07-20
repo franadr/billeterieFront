@@ -73,8 +73,25 @@ export class ListOffersService {
 
         var jsonobj = JSON.parse(disp);
 
-        return this._http.post(this.RESTurl,jsonobj,headers).map(res => res.json());
+        return this._http.post(this.RESTurl,jsonobj,headers).map(
+            res => res.json()
+        );
 
+
+    }
+
+    modifOffre(o: Offre){
+        let headers = new Headers({
+            'Content-Type':'application/json',
+            'Accept':'application/json'
+        });
+
+        this.RESTurl = "http://localhost:8080/offres/editOffre";
+        var offres = JSON.stringify(o);
+        console.log("offres is modified");
+        var jsonObj = JSON.parse(offres);
+        console.log(jsonObj);
+        return this._http.post(this.RESTurl,jsonObj,headers).map(res => res.json());
 
     }
 
