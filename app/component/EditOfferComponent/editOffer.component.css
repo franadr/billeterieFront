@@ -12,10 +12,10 @@
 .listOffre{
 
     width: 320px;
-    height: 310px;
+
     overflow: -moz-scrollbars-vertical;
-    overflow-y: scroll;
-    border: 1px rgba(91, 91, 91, 0.10) solid;
+    overflow-x: scroll;
+    /**border: 1px rgba(91, 91, 91, 0.10) solid;**/
 
 }
 

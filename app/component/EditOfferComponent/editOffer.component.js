@@ -34,12 +34,12 @@ var EditOfferComponent = (function (_super) {
     };
     EditOfferComponent.prototype.editOffre = function (offre) {
         var _this = this;
-        this._listoffers.modifOffre(offre).subscribe(function (data) { return _this.status = 'Offre ajouté'; }, function (err) { return _this.status = err; }, function () { return console.log("Done"); });
+        this._listoffers.modifOffre(offre).subscribe(function (data) { return _this.status = JSON.stringify(data); }, function (err) { return _this.status = err; }, function () { return console.log("Done"); });
     };
     EditOfferComponent.prototype.delOffre = function (idOffre) {
         var _this = this;
         console.log(idOffre);
-        this._listoffers.delOffre(idOffre).subscribe(function (data) { return _this.status = "ok"; }, function (err) { return _this.status = err; }, function () { return console.log("Done"); });
+        this._listoffers.delOffre(idOffre).subscribe(function (data) { return _this.status = JSON.stringify(data); }, function (err) { return _this.status = err; }, function () { return console.log("Done"); });
     };
     EditOfferComponent.prototype.CatchErrorCode = function (code) {
         var res;

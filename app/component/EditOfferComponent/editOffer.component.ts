@@ -48,7 +48,7 @@ export class EditOfferComponent extends OnInit{
 
     editOffre(offre){
         this._listoffers.modifOffre(offre).subscribe(
-            data => this.status = 'Offre ajouté',
+            data => this.status = JSON.stringify(data),
             err => this.status = err,
             ( )=> console.log("Done")
         );
@@ -60,7 +60,7 @@ export class EditOfferComponent extends OnInit{
         console.log(idOffre);
 
         this._listoffers.delOffre(idOffre).subscribe(
-            data => this.status = "ok",
+            data => this.status = JSON.stringify(data),
             err => this.status = err,
             ( )=> console.log("Done")
         )

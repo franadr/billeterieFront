@@ -37,6 +37,10 @@ var LogComponent = (function () {
     LogComponent.prototype.DispoModif = function (idOffre, idVendeur, quantite) {
         this._listoffers.modifDisp(idOffre, idVendeur, quantite).subscribe(function (data) { return console.log("ModifDone"); }, function (error) { return " "; });
     };
+    LogComponent.prototype.onSelect = function (Offre) {
+        this.offre = Offre;
+        console.log(this.offre.titre);
+    };
     LogComponent = __decorate([
         core_1.Component({
             selector: 'log',
