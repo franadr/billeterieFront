@@ -55,6 +55,17 @@ export class EditOfferComponent extends OnInit{
 
     }
 
+    delOffre(idOffre){
+
+        console.log(idOffre);
+
+        this._listoffers.delOffre(idOffre).subscribe(
+            data => this.status = "ok",
+            err => this.status = err,
+            ( )=> console.log("Done")
+        )
+    }
+
     CatchErrorCode(code : number) : string{
         var res : string;
 

@@ -9,9 +9,19 @@
 
 }
 
-.listoffre{
+.listOffre{
 
-    width: 350px;
-    height: 300px;
-    overflow: scroll;
+    width: 320px;
+    height: 310px;
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+    border: 1px rgba(91, 91, 91, 0.10) solid;
+
 }
+
+.tooltipbtn{
+    width: 40px;
+    height: auto;
+
+}
+

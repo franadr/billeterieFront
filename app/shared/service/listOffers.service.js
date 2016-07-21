@@ -65,11 +65,16 @@ var ListOffersService = (function () {
             'Accept': 'application/json'
         });
         this.RESTurl = "http://localhost:8080/offres/editOffre";
-        var offres = JSON.stringify(o);
         console.log("offres is modified");
-        var jsonObj = JSON.parse(offres);
-        console.log(jsonObj);
-        return this._http.post(this.RESTurl, jsonObj, headers).map(function (res) { return res.json(); });
+        return this._http.post(this.RESTurl, o, headers).map(function (res) { return res.json(); });
+    };
+    ListOffersService.prototype.delOffre = function (idOffre) {
+        var headers = new http_1.Headers({
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        });
+        this.RESTurl = "http://localhost:8080/offres/" + idOffre;
+        return this._http.delete(this.RESTurl).map(function (res) { return res.json(); });
     };
     ListOffersService = __decorate([
         core_1.Injectable(), 
