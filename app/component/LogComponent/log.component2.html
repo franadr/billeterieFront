@@ -18,7 +18,7 @@
             <td  *ngFor="let list2 of DispoOffres">
                 {{list2.quantite}}
                 <p class="range-field">
-                    <input style="color: green" type="range" min="0" max="20" #quantite  value="{{list2.quantite}}" (change)="DispoModif(list2.idOffre,list2.idVendeur,quantite.value)">Ajustement :{{quantite.value}}
+                    <input style="color: green" type="range" min="0" max="20" #quantite  value="{{list2.quantite}}" (change)="onSelect(list2.idOffre,list2.idVendeur,quantite.value)">
                 </p>
             </td>
 
@@ -35,6 +35,9 @@
             <option value = "{{list.idOffre}}"   *ngFor="let list of Offres" >{{list.titre}}</option>
         </select>
 
+<div *ngIf="SelectedDisp">
+<button (click)="DispoModif(SelectedDisp.idOffre,SelectedDisp.idVendeur,SelectedDisp.quantite)">Valider</button>
+</div>
 
 
 

@@ -7,27 +7,31 @@
         <ul id="nav-mobile" class="left hide-on-med-and-down">
             <li class="navbar-button">
                 <a class="navbar-link" [routerLink]="['/offres']">Liste des offres</a>
-
-
             </li>
+            <li class="navbar-button ">
+                <a class="navbar-link" [routerLink]="['/achat']" >Achat</a>
+            </li>
+
             <li class="navbar-button">
-                <!--<a class="navbar-link" [routerLink]="['/edit']">Editer les offres</a></li>-->
                 <dropdown>
-                <a class="dropdown-button active navbar-link " data-hover="false" data-beloworigin="true" data-constrainwidth="false"  data-activates="editmenu" materialize="dropdown">Edit</a>
+                <a class="dropdown-button active navbar-link navbar-button " data-hover="false" data-beloworigin="true" data-constrainwidth="false"  data-activates="editmenu" materialize="dropdown">Administration</a>
                     <ul id="editmenu" class = "dropdown-content active dropdownMenu navbar-link"  >
 
-                        <p><a class="dropdownMenu" [routerLink]="['/edit/add']">Ajouter une offre </a></p>
+                        <p><a class="dropdownMenu" [routerLink]="['/administration/add']">Ajouter une offre </a></p>
 
 
-                        <p><a class="dropdownMenu" [routerLink]="['/edit/edit']">Modifier une offre </a></p>
+                        <p><a class="dropdownMenu" [routerLink]="['/administration/edit']">Modifier une offre </a></p>
 
 
-                        <p><a class="dropdownMenu" [routerLink]="['/edit/log']">Log Vendeurs </a></p>
+                        <p><a class="dropdownMenu" [routerLink]="['/administration/log']">Log Vendeurs </a></p>
 
                     </ul>
                 </dropdown>
+            </li>
+
 
         </ul>
+
     </div>
 </nav>
 

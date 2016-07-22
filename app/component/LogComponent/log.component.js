@@ -10,12 +10,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var listOffers_service_1 = require('../../shared/service/listOffers.service');
+var dispoOffre_1 = require("../../shared/model/dispoOffre");
 var listDisp_component_1 = require("../ListDispComponent/listDisp.component");
 var index_1 = require("angular2-materialize/dist/index");
 var LogComponent = (function () {
     function LogComponent(_listoffers, _listVen) {
         this._listoffers = _listoffers;
         this._listVen = _listVen;
+        this.SelectedDisp = new dispoOffre_1.DispoOffre();
     }
     LogComponent.prototype.ngOnInit = function () {
         this.ListOffre();
@@ -37,9 +39,11 @@ var LogComponent = (function () {
     LogComponent.prototype.DispoModif = function (idOffre, idVendeur, quantite) {
         this._listoffers.modifDisp(idOffre, idVendeur, quantite).subscribe(function (data) { return console.log("ModifDone"); }, function (error) { return " "; });
     };
-    LogComponent.prototype.onSelect = function (Offre) {
-        this.offre = Offre;
-        console.log(this.offre.titre);
+    LogComponent.prototype.onSelect = function (idOffre, idVendeur, quantite) {
+        this.SelectedDisp.idOffre = idOffre;
+        this.SelectedDisp.idVendeur = idVendeur;
+        this.SelectedDisp.quantite = quantite;
+        console.log(this.SelectedDisp.idOffre);
     };
     LogComponent = __decorate([
         core_1.Component({

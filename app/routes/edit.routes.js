@@ -5,7 +5,7 @@ var log_component_1 = require("../component/LogComponent/log.component");
 var editOffer_component_1 = require("../component/EditOfferComponent/editOffer.component");
 exports.editRoutes = [
     {
-        path: 'edit',
+        path: 'administration',
         component: edit_component_1.EditComponent,
         children: [
             { path: 'add', component: addOffer_component_1.AddOfferComponent },

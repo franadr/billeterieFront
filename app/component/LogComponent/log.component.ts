@@ -32,6 +32,8 @@ export class LogComponent implements OnInit{
     Vendeurs : Vendeur[];
     Offres : Offre[];
     offre : Offre;
+    SelectedDisp:DispoOffre=new DispoOffre();
+
     idOffre:number;
 
     ListDispo(idOffre:number){
@@ -73,9 +75,12 @@ export class LogComponent implements OnInit{
 
     }
 
-    onSelect(Offre){
-        this.offre=Offre
+    onSelect(idOffre,idVendeur,quantite){
+        this.SelectedDisp.idOffre=idOffre;
+        this.SelectedDisp.idVendeur=idVendeur;
+        this.SelectedDisp.quantite=quantite;
 
-        console.log(this.offre.titre);
+
+        console.log(this.SelectedDisp.idOffre);
     }
 }

@@ -4,11 +4,13 @@ import {Offre} from "../../shared/model/offre";
 import { MaterializeDirective } from 'angular2-materialize';
 import {DispoOffre} from '../../shared/model/dispoOffre';
 import { ListDispComponent } from '../ListDispComponent/listDisp.component';
+import {AchatComponent} from "../AchatComponent/achat.component";
 
 @Component({
     selector : 'liste-offres',
-    directives : [MaterializeDirective,ListDispComponent],
+    directives : [MaterializeDirective,ListDispComponent,AchatComponent],
     templateUrl :'app/component/ListOffersComponent/listOffers.component.html',
+
     providers : [ListOffersService]
 })
 

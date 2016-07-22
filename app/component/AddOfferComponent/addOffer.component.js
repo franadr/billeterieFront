@@ -16,6 +16,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var common_1 = require('@angular/common');
 var listOffers_service_1 = require("../../shared/service/listOffers.service");
+var index_1 = require("angular2-materialize/dist/index");
 var AddOfferComponent = (function (_super) {
     __extends(AddOfferComponent, _super);
     function AddOfferComponent(_listVen) {
@@ -56,7 +57,7 @@ var AddOfferComponent = (function (_super) {
             selector: 'add-offer',
             templateUrl: 'app/component/AddOfferComponent/addOffer.component.html',
             styleUrls: ['app/component/AddOfferComponent/addOffer.component.css'],
-            directives: [common_1.FORM_DIRECTIVES],
+            directives: [common_1.FORM_DIRECTIVES, index_1.MaterializeDirective],
             providers: [listOffers_service_1.ListOffersService]
         }), 
         __metadata('design:paramtypes', [listOffers_service_1.ListOffersService])

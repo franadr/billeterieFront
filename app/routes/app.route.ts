@@ -4,6 +4,7 @@ import {DashboardComponent} from "../component/DashboardComponent/dashboard.comp
 import {EditComponent} from "../component/EditComponent/edit.component";
 import {AddOfferComponent} from "../component/AddOfferComponent/addOffer.component";
 import {editRoutes} from "./edit.routes";
+import {AchatComponent} from "../component/AchatComponent/achat.component";
 
 
 
@@ -22,8 +23,13 @@ const routes : RouterConfig = [
         component:ListOffersComponent
     },
     {
-        path:'edit',
+        path:'administration',
         component : EditComponent,
+
+    },
+    {
+        path : 'achat',
+        component : AchatComponent
 
     }
 

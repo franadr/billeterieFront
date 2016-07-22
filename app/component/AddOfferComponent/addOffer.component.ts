@@ -4,13 +4,14 @@ import { FORM_DIRECTIVES } from '@angular/common';
 import {ListOffersService} from "../../shared/service/listOffers.service";
 import {Offre} from "../../shared/model/offre";
 import {Vendeur} from "../../shared/model/vendeur";
+import {MaterializeDirective} from "angular2-materialize/dist/index";
 
 
 @Component({
     selector: 'add-offer',
     templateUrl: 'app/component/AddOfferComponent/addOffer.component.html',
     styleUrls : ['app/component/AddOfferComponent/addOffer.component.css'],
-    directives : [FORM_DIRECTIVES],
+    directives : [FORM_DIRECTIVES,MaterializeDirective],
     providers:[ListOffersService]
 
 })

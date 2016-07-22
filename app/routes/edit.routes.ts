@@ -6,7 +6,7 @@ import {LogComponent} from "../component/LogComponent/log.component";
 import {EditOfferComponent} from "../component/EditOfferComponent/editOffer.component";
 export const editRoutes: RouterConfig = [
     {
-        path: 'edit',
+        path: 'administration',
         component: EditComponent,
         children: [
             { path: 'add',  component: AddOfferComponent },
