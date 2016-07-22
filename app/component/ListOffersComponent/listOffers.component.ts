@@ -31,10 +31,6 @@ export class ListOffersComponent implements OnInit{
         
     }
 
-
-    
-
-
     status: string;
     ListOffres : Offre[];
     DispoOffres : DispoOffre[];

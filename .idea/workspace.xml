@@ -2,31 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3918dc60-f133-48cf-a0eb-3508abdc5a92" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/component/AchatComponent/achat.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/component/AchatComponent/achat.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/shared/model/achatModel.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/component/AddOfferComponent/addOffer.component.html" afterPath="$PROJECT_DIR$/app/component/AddOfferComponent/addOffer.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/component/AddOfferComponent/addOffer.component.js" afterPath="$PROJECT_DIR$/app/component/AddOfferComponent/addOffer.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/component/AddOfferComponent/addOffer.component.js.map" afterPath="$PROJECT_DIR$/app/component/AddOfferComponent/addOffer.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/component/AddOfferComponent/addOffer.component.ts" afterPath="$PROJECT_DIR$/app/component/AddOfferComponent/addOffer.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/component/DashboardComponent/dashboard.component.css" afterPath="$PROJECT_DIR$/app/component/DashboardComponent/dashboard.component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/component/DashboardComponent/dashboard.component.html" afterPath="$PROJECT_DIR$/app/component/DashboardComponent/dashboard.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/component/EditOfferComponent/editOffer.component.css" afterPath="$PROJECT_DIR$/app/component/EditOfferComponent/editOffer.component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/component/ListOffersComponent/listOffers.component.html" afterPath="$PROJECT_DIR$/app/component/ListOffersComponent/listOffers.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/component/ListOffersComponent/listOffers.component.js" afterPath="$PROJECT_DIR$/app/component/ListOffersComponent/listOffers.component.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/component/ListOffersComponent/listOffers.component.js.map" afterPath="$PROJECT_DIR$/app/component/ListOffersComponent/listOffers.component.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/component/ListOffersComponent/listOffers.component.ts" afterPath="$PROJECT_DIR$/app/component/ListOffersComponent/listOffers.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/component/LogComponent/log.component.js" afterPath="$PROJECT_DIR$/app/component/LogComponent/log.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/component/LogComponent/log.component.js.map" afterPath="$PROJECT_DIR$/app/component/LogComponent/log.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/component/LogComponent/log.component.ts" afterPath="$PROJECT_DIR$/app/component/LogComponent/log.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/component/LogComponent/log.component2.html" afterPath="$PROJECT_DIR$/app/component/LogComponent/log.component2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/app.route.js" afterPath="$PROJECT_DIR$/app/routes/app.route.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/app.route.js.map" afterPath="$PROJECT_DIR$/app/routes/app.route.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/app.route.ts" afterPath="$PROJECT_DIR$/app/routes/app.route.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/edit.routes.js" afterPath="$PROJECT_DIR$/app/routes/edit.routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/edit.routes.js.map" afterPath="$PROJECT_DIR$/app/routes/edit.routes.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/edit.routes.ts" afterPath="$PROJECT_DIR$/app/routes/edit.routes.ts" />
     </list>
     <ignored path="Billeterie.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,21 +58,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="log.component2.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="log.component2.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/component/LogComponent/log.component2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+            <state relative-caret-position="45">
+              <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="achat.component.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="achat.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/component/AchatComponent/achat.component.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listOffers.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/component/ListOffersComponent/listOffers.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -124,18 +113,8 @@
       <file leaf-file-name="listOffers.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/component/ListOffersComponent/listOffers.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="41" column="3" selection-start-line="41" selection-start-column="3" selection-end-line="48" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="editOffer.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/component/EditOfferComponent/editOffer.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1215">
-              <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+            <state relative-caret-position="408">
+              <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -216,10 +195,8 @@
         <option value="$PROJECT_DIR$/app/component/EditOfferComponent/editOffer.component.css" />
         <option value="$PROJECT_DIR$/app/routes/edit.routes.ts" />
         <option value="$PROJECT_DIR$/app/component/LogComponent/log.component.html" />
-        <option value="$PROJECT_DIR$/app/component/LogComponent/log.component2.html" />
         <option value="$PROJECT_DIR$/app/component/DashboardComponent/dashboard.component.css" />
         <option value="$PROJECT_DIR$/app/component/LogComponent/log.component.ts" />
-        <option value="$PROJECT_DIR$/app/component/ListOffersComponent/listOffers.component.ts" />
         <option value="$PROJECT_DIR$/app/component/DashboardComponent/dashboard.component.html" />
         <option value="$PROJECT_DIR$/app/routes/app.route.ts" />
         <option value="$PROJECT_DIR$/app/component/ListOffersComponent/listOffers.component.html" />
@@ -227,6 +204,8 @@
         <option value="$PROJECT_DIR$/app/shared/model/achatModel.ts" />
         <option value="$PROJECT_DIR$/app/component/AchatComponent/achat.component.ts" />
         <option value="$PROJECT_DIR$/app/component/AchatComponent/achat.component.html" />
+        <option value="$PROJECT_DIR$/app/component/ListOffersComponent/listOffers.component.ts" />
+        <option value="$PROJECT_DIR$/app/component/LogComponent/log.component2.html" />
       </list>
     </option>
   </component>
@@ -316,6 +295,10 @@
               <option name="myItemId" value="component" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LogComponent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -336,6 +319,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ListOffersComponent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Billeterie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Billeterie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="component" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -829,7 +830,7 @@
       <workItem from="1469082044425" duration="11911000" />
       <workItem from="1469169421368" duration="5315000" />
       <workItem from="1469178949628" duration="2823000" />
-      <workItem from="1469184537139" duration="6931000" />
+      <workItem from="1469184537139" duration="7951000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1468829669072</created>
@@ -936,11 +937,18 @@
       <option name="project" value="LOCAL" />
       <updated>1469112303386</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added achat component ,dashboard update, style work&#10;">
+      <created>1469196189744</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1469196189744</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170274000" />
+    <option name="totallyTimeSpent" value="171294000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -953,7 +961,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26496816" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26496816" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -996,7 +1004,8 @@
     <MESSAGE value="Avance avec log component html + ts, fonctionnel added &lt;pre&gt;&#10;" />
     <MESSAGE value="added Edit offer functionality &#10;" />
     <MESSAGE value="added delOffer functionality, style work&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="added delOffer functionality, style work&#10;" />
+    <MESSAGE value="added achat component ,dashboard update, style work&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="added achat component ,dashboard update, style work&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1268,14 +1277,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/component/ListOffersComponent/listOffers.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/shared/model/achatModel.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -1336,26 +1337,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/component/LogComponent/log.component2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/component/EditOfferComponent/editOffer.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="519">
           <caret line="62" column="54" selection-start-line="62" selection-start-column="54" selection-end-line="62" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/component/ListOffersComponent/listOffers.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="41" column="3" selection-start-line="41" selection-start-column="3" selection-end-line="48" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1374,6 +1359,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/component/ListOffersComponent/listOffers.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/component/ListOffersComponent/listOffers.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/component/LogComponent/log.component2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
           <folding />
         </state>
       </provider>

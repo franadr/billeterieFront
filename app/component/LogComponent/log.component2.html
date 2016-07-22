@@ -1,20 +1,24 @@
 <!-- Version 1 of log.html with dropdown list  -->
 
-    <h4 class="test">Quantités à ajuster </h4>
+    <h4 class="test">Quantités à ajuster (1 seule à la fois) </h4>
+<div *ngIf="DispoOffres">
     <table>
         <thead>
         <tr>
-
+            <th></th>
             <th *ngFor="let list of Vendeurs">
                 {{list.nom}} {{list.prenom}}
             </th>
         </tr>
         </thead>
         <tbody>
+
         <tr>
 
 
-
+            <td>
+                Quantités actuelle pour l'offre selectionné :
+            </td>
             <td  *ngFor="let list2 of DispoOffres">
                 {{list2.quantite}}
                 <p class="range-field">
@@ -29,7 +33,7 @@
 
 
     </table>
-
+</div>
         <select materialize="material_select"  [(ngModel)]="idOffre" (ngModelChange)="ListDispo(idOffre)"  >
             <option value="" disabled selected>Selectionner Activité</option>
             <option value = "{{list.idOffre}}"   *ngFor="let list of Offres" >{{list.titre}}</option>
