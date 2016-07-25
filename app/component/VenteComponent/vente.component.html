@@ -1,0 +1,40 @@
+
+
+<div class="row">
+    <form #VenteForm = "ngForm" (ngSubmit)="Vente(VenteForm.value)" class="VenteForm" materialize>
+
+
+            <select class="col s3" materialize="material_select" id="idVendeur" [(ngModel)]="model2" (ngModelChange)="OnSelectVendeur(model2)"ngControl="vendeur" >
+                <option value="" disabled selected>Selectionner Vendeur</option>
+                <option [ngValue]="list"   *ngFor="let list of Vendeurs" >{{list.nom}} {{list.prenom}} / {{list.location}}</option>
+            </select>
+
+            <select class="col s3" materialize="material_select" id="idOffre" [(ngModel)]="model" (ngModelChange)="OnSelectOffre(model)"  ngControl="offre"  >
+                <option value="" disabled selected>Selectionner Activité</option>
+                <option [ngValue]="list2" *ngFor="let list2 of ListOffres" >{{list2.titre}}</option>
+            </select>
+
+
+            <div class = "input-field col s1" *ngIf="SelectedOffer" >
+            <input  disabled type ="number"  [(ngModel)] = "SelectedOffer.prixCfl" value= {{SelectedOffer.prixCfl}} id="prixCfl" ngControl="prixCfl">
+             <label for="prixCfl"  class="active">*Prix CFL</label>
+            </div>
+
+            <div class="input-field col s1"  *ngIf="SelectedOffer" >
+
+                    <input style="color: green" type="number" min="0" max="20" value = 1 id="quantite" ngControl="quantite" >
+                <label for="quantite"  class="active">Quantite</label>
+            </div>
+
+            <div class="col s1">
+                <input id="trigramme" type="text" ngControl="trigramme">
+                <label for="trigramme" class="">Trigramme acheteur</label>
+            </div>
+
+        <button  class="waves-effect waves-light tooltipped " type="submit" data-delay="10" data-position="bottom" data-tooltip="Valider"  materialize="tooltip" name="action">
+            <i class="material-icons">add</i>
+        </button>
+
+    </form>
+</div>
+

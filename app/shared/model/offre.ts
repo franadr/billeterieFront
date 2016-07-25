@@ -8,4 +8,5 @@ export class Offre{
     commande : number;
     imgUrl : string;
     description : string;
+    idOffre:number;
 }

@@ -76,6 +76,18 @@ var ListOffersService = (function () {
         this.RESTurl = "http://localhost:8080/offres/" + idOffre;
         return this._http.delete(this.RESTurl).map(function (res) { return res.json(); });
     };
+    ListOffersService.prototype.logVente = function (v) {
+        var headers = new http_1.Headers({
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        });
+        this.RESTurl = "http://localhost:8080/offres/vente";
+        return this._http.post(this.RESTurl, v, headers).map(function (res) { return res.json(); });
+    };
+    ListOffersService.prototype.getHistorique = function () {
+        this.RestUrl = "http://localhost:8080/offres/historique";
+        return this._http.get(this.RestUrl).map(function (res) { return res.json(); });
+    };
     ListOffersService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])

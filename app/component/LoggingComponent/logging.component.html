@@ -1,0 +1,22 @@
+
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Déscription</th>
+    </tr>
+    <div class="scrollList">
+    <tr *ngFor="let list of Historique ">
+
+        <td >
+            {{list.date | date: 'Le dd/MM/yyyy à hh:mm'}}
+        </td>
+        <td>
+            {{list.operation}}
+        </td>
+    </tr>
+    </div>
+</table>
+
+
+
+

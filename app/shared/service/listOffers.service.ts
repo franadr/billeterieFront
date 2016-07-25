@@ -7,6 +7,8 @@ import {Observable} from "rxjs/Rx";
 import {Vendeur} from "../model/vendeur";
 import {DispoOffre} from "../model/dispoOffre";
 import {Offre} from "../model/offre";
+import {Vente} from "../model/vente";
+import {Historique} from "../model/hist";
 
 
 
@@ -106,6 +108,23 @@ export class ListOffersService {
        return this._http.delete(this.RESTurl).map(res => res.json());
 
 
+    }
+
+    logVente(v : Vente){
+        let headers = new Headers({
+            'Content-Type':'application/json',
+            'Accept':'application/json'
+        });
+        this.RESTurl="http://localhost:8080/offres/vente";
+
+        return this._http.post(this.RESTurl,v,headers).map(res => res.json());
+
+    }
+
+    getHistorique():Observable<Historique[]>{
+
+        this.RestUrl="http://localhost:8080/offres/historique";
+        return this._http.get(this.RestUrl).map(res => res.json());
     }
 
 

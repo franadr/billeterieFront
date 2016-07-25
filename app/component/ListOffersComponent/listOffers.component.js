@@ -12,7 +12,6 @@ var core_1 = require('@angular/core');
 var listOffers_service_1 = require('../../shared/service/listOffers.service');
 var angular2_materialize_1 = require('angular2-materialize');
 var listDisp_component_1 = require('../ListDispComponent/listDisp.component');
-var achat_component_1 = require("../AchatComponent/achat.component");
 var ListOffersComponent = (function () {
     function ListOffersComponent(_listoffers, ul) {
         this._listoffers = _listoffers;
@@ -45,7 +44,7 @@ var ListOffersComponent = (function () {
     ListOffersComponent = __decorate([
         core_1.Component({
             selector: 'liste-offres',
-            directives: [angular2_materialize_1.MaterializeDirective, listDisp_component_1.ListDispComponent, achat_component_1.AchatComponent],
+            directives: [angular2_materialize_1.MaterializeDirective, listDisp_component_1.ListDispComponent],
             templateUrl: 'app/component/ListOffersComponent/listOffers.component.html',
             providers: [listOffers_service_1.ListOffersService]
         }), 
