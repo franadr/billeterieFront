@@ -32,9 +32,10 @@ export class LogComponent implements OnInit{
     Vendeurs : Vendeur[];
     Offres : Offre[];
     offre : Offre;
-    SelectedDisp:DispoOffre=new DispoOffre();
+    SelectedDisp:DispoOffre;
 
     idOffre:number;
+    flag : boolean = false;
 
     ListDispo(idOffre:number){
 
@@ -76,11 +77,32 @@ export class LogComponent implements OnInit{
     }
 
     onSelect(idOffre,idVendeur,quantite){
+        this.SelectedDisp = new DispoOffre();
         this.SelectedDisp.idOffre=idOffre;
         this.SelectedDisp.idVendeur=idVendeur;
         this.SelectedDisp.quantite=quantite;
 
 
         console.log(this.SelectedDisp.idOffre);
+    }
+
+
+    SelectedOut : number;
+
+    onSelectOutDisp(idOut){
+        this.flag = true;
+        this.SelectedOut = idOut;
+
+    }
+
+    SelectedOut:number;
+    flagIn:boolean=false;
+    onSelectInDisp(idIn){
+        this.flagIn=true;
+
+    }
+    SelectedQty : number;
+    onSelectQty(quantité){
+        this.SelectedQty=quantité;
     }
 }

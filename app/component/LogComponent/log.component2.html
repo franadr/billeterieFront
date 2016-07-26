@@ -1,6 +1,6 @@
 <!-- Version 1 of log.html with dropdown list  -->
 
-    <h4 class="test">Quantités à ajuster (1 seule à la fois) </h4>
+    <h4 class="test">Quantités à ajuster : </h4>
 <div *ngIf="DispoOffres">
     <table>
         <thead>
@@ -34,13 +34,65 @@
 
     </table>
 </div>
+
+
+<h4 class="test"> Quantité à transferer :</h4>
+<div class ="row">
+    <div class="">
+
+    </div>
+        <div *ngIf="DispoOffres" class="push-s4 col s5">
+            <div class="row">
+                <div class="col s6">
+                    <form>
+                        <p *ngFor="let list of Vendeurs;let i = index">
+                            <input name="group1" type="radio" id="out_{{i}}" (change)="onSelectOutDisp(list.idVendeur)" />
+                            <label attr.for="out_{{i}}">{{list.nom}} {{list.prenom}} ({{list.location}})</label>
+                        </p>
+                    </form>
+                </div>
+
+
+                <div class="col s6" *ngIf="flag">
+
+                    <div *ngFor="let list of Vendeurs;let i = index">
+                        <p *ngIf="SelectedOut==list.idVendeur">
+                        <input disabled="disabled"  name="group1" type="radio" id="in_{{i}}" />
+                        <label style="font-style: italic;color: lightgray" attr.for="in_{{i}}">{{list.nom}} {{list.prenom}} ({{list.location}})</label>
+                        </p>
+                    </div>
+
+                     <div *ngFor="let list of Vendeurs;let i = index">
+                        <p *ngIf="!(SelectedOut==list.idVendeur)">
+                        <input name="group1" type="radio" id="in_{{i}}" (change)="onSelectInDisp(list.idVendeur)" />
+                        <label attr.for="in_{{i}}">{{list.nom}} {{list.prenom}} ({{list.location}})</label>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    <div  *ngIf="flagIn" class="input-field col s1 push-s4">
+        <input id="quantite" #quantite min="0" type="number" class="validate" (change)="onSelectQty(quantite.value)">
+        <label for="quantite">Quantité</label>
+    </div>
+</div>
+
         <select materialize="material_select"  [(ngModel)]="idOffre" (ngModelChange)="ListDispo(idOffre)"  >
             <option value="" disabled selected>Selectionner Activité</option>
             <option value = "{{list.idOffre}}"   *ngFor="let list of Offres" >{{list.titre}}</option>
         </select>
 
+
+<!-- Button for qty adjustment-->
 <div *ngIf="SelectedDisp">
 <button (click)="DispoModif(SelectedDisp.idOffre,SelectedDisp.idVendeur,SelectedDisp.quantite)">Valider</button>
+</div>
+
+<!-- Button for qty transfert-->
+<div *ngIf="SelectedQty">
+    <button >Valider</button>
 </div>
 
 

@@ -7,4 +7,5 @@ export class Vente {
     trigramme : string;
     quantite : number;
 
+
 }

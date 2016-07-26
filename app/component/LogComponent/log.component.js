@@ -17,7 +17,8 @@ var LogComponent = (function () {
     function LogComponent(_listoffers, _listVen) {
         this._listoffers = _listoffers;
         this._listVen = _listVen;
-        this.SelectedDisp = new dispoOffre_1.DispoOffre();
+        this.flag = false;
+        this.flagIn = false;
     }
     LogComponent.prototype.ngOnInit = function () {
         this.ListOffre();
@@ -40,10 +41,21 @@ var LogComponent = (function () {
         this._listoffers.modifDisp(idOffre, idVendeur, quantite).subscribe(function (data) { return console.log("ModifDone"); }, function (error) { return " "; });
     };
     LogComponent.prototype.onSelect = function (idOffre, idVendeur, quantite) {
+        this.SelectedDisp = new dispoOffre_1.DispoOffre();
         this.SelectedDisp.idOffre = idOffre;
         this.SelectedDisp.idVendeur = idVendeur;
         this.SelectedDisp.quantite = quantite;
         console.log(this.SelectedDisp.idOffre);
+    };
+    LogComponent.prototype.onSelectOutDisp = function (idOut) {
+        this.flag = true;
+        this.SelectedOut = idOut;
+    };
+    LogComponent.prototype.onSelectInDisp = function (idIn) {
+        this.flagIn = true;
+    };
+    LogComponent.prototype.onSelectQty = function (quantité) {
+        this.SelectedQty = quantité;
     };
     LogComponent = __decorate([
         core_1.Component({

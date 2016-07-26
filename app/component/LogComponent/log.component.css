@@ -11,3 +11,20 @@ button:hover{
     background-color: red;
 
 }
+
+[type="radio"]:not(:checked)+label:before, [type="radio"]:not(:checked)+label:after{
+
+    border:2px solid rgba(0,0,0,0.3);
+}
+
+[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:after{
+
+    background-color: #F18D01 ;
+    border:2px solid rgba(0,0,0,0);
+}
+[type="radio"]:not(:checked)+label, [type="radio"]:checked+label{
+    font-family: Roboto;
+    font-weight: 100;
+    font-size: 1.3rem;
+    color: rgba(0,0,0,0.71);
+}
